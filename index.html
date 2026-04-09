@@ -2,329 +2,184 @@
 <html lang="ko">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="개발자 포트폴리오" />
   <meta property="og:title" content="포트폴리오" />
   <meta property="og:description" content="프로젝트/기술/경험을 정리한 포트폴리오" />
   <meta property="og:type" content="website" />
-  <title>포트폴리오</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <title>Expert Portfolio | Senior Consultant</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&display=swap');
+    body { font-family: 'Pretendard', sans-serif; scroll-behavior: smooth; }
+    .glass-card { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+    .text-gradient { background: linear-gradient(135deg, #60a5fa, #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .section-dark { background-color: #0f172a; color: white; }
+  </style>
 </head>
-<body>
-  <a class="skip" href="#main">본문으로 건너뛰기</a>
+<body class="bg-slate-50 text-slate-900">
 
-  <header class="header" id="top">
-    <div class="container header__inner">
-      <a class="brand" href="#top" aria-label="홈으로">
-        <span class="brand__mark">P</span>
-        <span class="brand__text">Portfolio</span>
-      </a>
-
-      <nav class="nav" aria-label="주요 메뉴">
-        <a href="#about">소개</a>
-        <a href="#skills">기술</a>
-        <a href="#projects">프로젝트</a>
-        <a href="#experience">경험</a>
-        <a href="#contact">연락</a>
-      </nav>
-
-      <div class="header__actions">
-        <button class="icon-btn" id="themeToggle" type="button" aria-label="테마 전환">
-          <span class="icon" aria-hidden="true">◐</span>
-        </button>
-        <button class="icon-btn" id="menuToggle" type="button" aria-label="메뉴 열기">
-          <span class="icon" aria-hidden="true">≡</span>
-        </button>
-      </div>
-    </div>
-
-    <div class="mobile-nav" id="mobileNav" hidden>
-      <div class="container mobile-nav__inner">
-        <a href="#about">소개</a>
-        <a href="#skills">기술</a>
-        <a href="#projects">프로젝트</a>
-        <a href="#experience">경험</a>
-        <a href="#contact">연락</a>
-      </div>
-    </div>
-  </header>
-
-  <main id="main">
-    <section class="hero">
-      <div class="container hero__inner">
-        <div class="hero__copy">
-          <p class="badge">구직중 · 프론트엔드/백엔드/풀스택 중 선택</p>
-          <h1 class="hero__title">
-            <span class="muted">안녕하세요,</span><br />
-            <span class="gradient">[이름]</span>입니다.
-          </h1>
-          <p class="hero__subtitle">
-            사용자 경험과 성능을 함께 고민하는 개발자입니다. 문제를 정의하고, 작은 단위로 빠르게 실험하며, 안정적으로 배포하는 것을 좋아합니다.
-          </p>
-
-          <div class="hero__cta">
-            <a class="btn btn--primary" href="#projects">프로젝트 보기</a>
-            <a class="btn btn--ghost" href="#contact">연락하기</a>
-          </div>
-
-          <div class="hero__meta">
-            <a class="chip" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
-            <a class="chip" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a class="chip" href="#" target="_blank" rel="noreferrer">Resume(PDF)</a>
-          </div>
+    <header class="relative h-screen flex items-center justify-center section-dark overflow-hidden px-6">
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-600 rounded-full filter blur-[100px] animate-pulse"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-64 h-64 bg-purple-600 rounded-full filter blur-[100px] animate-pulse"></div>
         </div>
 
-        <div class="hero__card" role="img" aria-label="프로필 카드">
-          <div class="profile">
-            <div class="profile__avatar" aria-hidden="true">[사진]</div>
-            <div class="profile__body">
-              <div class="profile__name">[이름] · [직무]</div>
-              <div class="profile__desc">[한 줄 소개: 예) React/Node 기반으로 제품을 만드는 개발자]</div>
-              <div class="profile__stats">
-                <div class="stat">
-                  <div class="stat__k">주요 스택</div>
-                  <div class="stat__v">React · TypeScript · Node</div>
+        <div class="relative z-10 max-w-5xl text-center">
+            <h2 class="text-blue-400 font-bold tracking-[0.2em] mb-4 uppercase text-sm">Strategic Business Architect</h2>
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-8 leading-tight">
+                현장의 데이터를 <br /> <span class="text-gradient">기업의 가치</span>로 바꿉니다
+            </h1>
+            <p class="text-slate-400 text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
+                500억 규모 정책자금 운용과 1,000여 개사 진단 경험을 보유한 <br />
+                <strong>DX · ESG · 스마트제조</strong> 통합 솔루션 파트너입니다.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#portfolio" class="px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-full font-bold transition transform hover:scale-105 shadow-lg shadow-blue-500/20">성과 확인하기</a>
+                <a href="#contact" class="px-8 py-4 bg-slate-800 hover:bg-slate-700 rounded-full font-bold transition border border-slate-700">협업 제안</a>
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-slate-500">
+            <i class="fas fa-chevron-down text-2xl"></i>
+        </div>
+    </header>
+
+    <section class="py-24 bg-white px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="text-center p-8 rounded-3xl bg-slate-50">
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-6 text-blue-600 text-2xl">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3">금융 솔루션</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed text-balance">500억 규모 자금 심사 및 재무 분석을 통한 최적의 정책금융 매칭</p>
                 </div>
-                <div class="stat">
-                  <div class="stat__k">관심사</div>
-                  <div class="stat__v">UX · 성능 · 테스트</div>
+                <div class="text-center p-8 rounded-3xl bg-slate-50">
+                    <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-6 text-purple-600 text-2xl">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3">기술 혁신(DX)</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed text-balance">스마트 팩토리 도입 성공률 90%, 현장 중심의 디지털 전환 가이드</p>
                 </div>
-              </div>
+                <div class="text-center p-8 rounded-3xl bg-slate-50">
+                    <div class="w-16 h-16 bg-emerald-100 rounded-2xl flex items-center justify-center mx-auto mb-6 text-emerald-600 text-2xl">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3">안전 & ESG</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed text-balance">공급망 실사와 산업안전을 결합한 지속가능 경영 체계 구축</p>
+                </div>
             </div>
-          </div>
-
-          <div class="mini">
-            <div class="mini__label">최근 성과</div>
-            <ul class="mini__list">
-              <li>핵심 페이지 LCP 2.8s → 1.6s 개선</li>
-              <li>배포 자동화로 릴리즈 소요시간 30% 단축</li>
-              <li>사용자 피드백 기반 전환율 +12%</li>
-            </ul>
-          </div>
         </div>
-      </div>
     </section>
 
-    <section class="section" id="about">
-      <div class="container">
-        <div class="section__head">
-          <h2 class="section__title">소개</h2>
-          <p class="section__desc">내가 어떤 문제를 어떤 방식으로 해결하는지 요약합니다.</p>
+    <section id="portfolio" class="py-24 bg-slate-900 text-white px-6 overflow-hidden">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-8">대표 성공 사례</h2>
+                    <div class="space-y-6">
+                        <div class="glass-card p-6 rounded-2xl">
+                            <h4 class="text-blue-400 font-bold mb-2">모체 수주 가치 증대 프로젝트</h4>
+                            <p class="text-slate-300 text-sm leading-relaxed">스마트 공정 현업 적용을 통해 협력사 평가 등급을 상향시켜, 모체 수주 물량을 확보하고 <strong>전체 매출 30% 향상</strong>을 달성했습니다.</p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="glass-card p-4 rounded-xl text-center">
+                                <div class="text-2xl font-bold text-gradient">90%</div>
+                                <div class="text-[10px] text-slate-500 uppercase tracking-widest mt-1">도입 성공률</div>
+                            </div>
+                            <div class="glass-card p-4 rounded-xl text-center">
+                                <div class="text-2xl font-bold text-gradient">50+</div>
+                                <div class="text-[10px] text-slate-500 uppercase tracking-widest mt-1">성공 기업 수</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 relative">
+                    <div class="bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-3xl p-8 border border-white/10">
+                        <div class="space-y-4">
+                            <div class="h-4 w-1/3 bg-white/10 rounded"></div>
+                            <div class="h-24 w-full bg-white/5 rounded-xl border border-white/5"></div>
+                            <div class="grid grid-cols-3 gap-2">
+                                <div class="h-16 bg-white/5 rounded-lg"></div>
+                                <div class="h-16 bg-white/5 rounded-lg"></div>
+                                <div class="h-16 bg-white/5 rounded-lg"></div>
+                            </div>
+                        </div>
+                        <div class="mt-8 flex justify-center text-6xl text-blue-500/30">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="grid grid--2">
-          <div class="card">
-            <h3 class="card__title">강점</h3>
-            <ul class="list">
-              <li>요구사항을 기능/비기능으로 분리하고 우선순위를 정합니다.</li>
-              <li>지표(LCP/TTI/에러율)로 성과를 검증합니다.</li>
-              <li>재사용 가능한 컴포넌트/모듈로 유지보수 비용을 줄입니다.</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3 class="card__title">가치관</h3>
-            <ul class="list">
-              <li>사용자에게 의미 있는 변화에 집중합니다.</li>
-              <li>작게 만들고, 빠르게 피드백을 받습니다.</li>
-              <li>문서/테스트/자동화로 팀의 속도를 높입니다.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <section class="section" id="skills">
-      <div class="container">
-        <div class="section__head">
-          <h2 class="section__title">기술 스택</h2>
-          <p class="section__desc">자주 쓰는 기술과 숙련도를 간단히 정리합니다.</p>
-        </div>
+    <section id="experience" class="py-24 bg-white px-6">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-16">
+            <div class="md:w-1/3">
+                <h2 class="text-3xl font-bold mb-6">검증된 <br /> 전문 역량</h2>
+                <p class="text-slate-500 leading-relaxed mb-8">현장 실무와 이론을 겸비한 국가 공인 및 전문 자격을 통해 기업의 리스크를 관리합니다.</p>
+                <div class="space-y-4">
+                    <div class="flex items-center gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100">
+                        <div class="text-blue-600"><i class="fas fa-certificate"></i></div>
+                        <span class="font-semibold">기술거래사</span>
+                    </div>
+                    <div class="flex items-center gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100">
+                        <div class="text-blue-600"><i class="fas fa-certificate"></i></div>
+                        <span class="font-semibold">DX 컨설턴트 1급</span>
+                    </div>
+                    <div class="flex items-center gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100">
+                        <div class="text-blue-600"><i class="fas fa-certificate"></i></div>
+                        <span class="font-semibold">산업안전기사</span>
+                    </div>
+                    <div class="flex items-center gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100">
+                        <div class="text-blue-600"><i class="fas fa-certificate"></i></div>
+                        <span class="font-semibold">ESG 컨설턴트 1급</span>
+                    </div>
+                </div>
+            </div>
 
-        <div class="skills">
-          <div class="skill-group">
-            <div class="skill-group__title">Frontend</div>
-            <div class="tags">
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-              <span class="tag">JavaScript</span>
-              <span class="tag">TypeScript</span>
-              <span class="tag">React</span>
+            <div class="md:w-2/3">
+                <h2 class="text-3xl font-bold mb-12">경력 기술서</h2>
+                <div class="relative border-l-2 border-slate-100 pl-10 space-y-12">
+                    <div class="relative">
+                        <div class="absolute -left-[49px] top-0 w-4 h-4 rounded-full bg-blue-600 border-4 border-white"></div>
+                        <span class="text-blue-600 font-bold text-sm">소상공인시장 진흥공단 센터장</span>
+                        <h4 class="text-xl font-bold mt-1 mb-3">정책금융 심사 및 리스크 관리 총괄</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            재무제표 정밀 분석을 통한 소상공인 신용 평가 및 500억 규모 정책자금 승인 프로세스 총괄. 부실 대출 방지 및 우수 소상공인 발굴 시스템 구축.
+                        </p>
+                    </div>
+                    <div class="relative">
+                        <div class="absolute -left-[49px] top-0 w-4 h-4 rounded-full bg-slate-300 border-4 border-white"></div>
+                        <span class="text-slate-400 font-bold text-sm">소공인특화지원센터 센터장</span>
+                        <h4 class="text-xl font-bold mt-1 mb-3">스마트 공정 인프라 구축 및 현장 지휘</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            제조 현업 적용을 위한 사업 신청서 평가 및 현장 실사 총괄. 50개사 이상의 스마트 팩토리 도입을 통한 생산성 혁신 및 예산 집행 관리.
+                        </p>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="skill-group">
-            <div class="skill-group__title">Backend</div>
-            <div class="tags">
-              <span class="tag">Node.js</span>
-              <span class="tag">Express</span>
-              <span class="tag">REST</span>
-              <span class="tag">PostgreSQL</span>
-            </div>
-          </div>
-          <div class="skill-group">
-            <div class="skill-group__title">DevOps/Tools</div>
-            <div class="tags">
-              <span class="tag">Git</span>
-              <span class="tag">GitHub Actions</span>
-              <span class="tag">Docker</span>
-              <span class="tag">Sentry</span>
-            </div>
-          </div>
         </div>
-      </div>
     </section>
 
-    <section class="section" id="projects">
-      <div class="container">
-        <div class="section__head">
-          <h2 class="section__title">프로젝트</h2>
-          <p class="section__desc">대표 프로젝트 3개 정도만 깊게 보여주는 구성이 좋습니다.</p>
+    <footer id="contact" class="py-24 section-dark px-6 text-center border-t border-white/5">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="text-3xl font-bold mb-6">전문적인 파트너십을 제안합니다</h2>
+            <p class="text-slate-400 mb-10">귀사의 비즈니스 혁신과 안정적인 자금 흐름, <br /> 실질적인 DX 성과를 함께 만들어가겠습니다.</p>
+            <div class="inline-flex flex-col md:flex-row gap-4">
+                <a href="mailto:your-email@example.com" class="px-10 py-4 bg-white text-slate-900 rounded-full font-bold hover:bg-blue-50 transition flex items-center justify-center gap-3">
+                    <i class="fas fa-envelope"></i> 이메일 문의
+                </a>
+                <div class="px-10 py-4 glass-card rounded-full font-bold flex items-center justify-center gap-3">
+                    <i class="fas fa-phone"></i> 010-XXXX-XXXX
+                </div>
+            </div>
+            <p class="mt-20 text-slate-600 text-xs">© 2024 전문 컨설턴트 포트폴리오. All rights reserved.</p>
         </div>
+    </footer>
 
-        <div class="project-grid">
-          <article class="project card">
-            <div class="project__top">
-              <h3 class="project__title">프로젝트 A</h3>
-              <div class="project__links">
-                <a class="link" href="#" target="_blank" rel="noreferrer">Demo</a>
-                <a class="link" href="#" target="_blank" rel="noreferrer">Code</a>
-              </div>
-            </div>
-            <p class="project__desc">문제/해결/성과가 보이도록 한 문단으로 설명합니다.</p>
-            <ul class="list list--compact">
-              <li>핵심 기능: 예) OAuth 로그인, 대시보드, 검색</li>
-              <li>내 역할: 예) 설계/구현/배포/모니터링</li>
-              <li>성과: 예) 응답시간 40% 개선, 사용자 2k</li>
-            </ul>
-            <div class="tags">
-              <span class="tag">React</span>
-              <span class="tag">TypeScript</span>
-              <span class="tag">API</span>
-            </div>
-          </article>
-
-          <article class="project card">
-            <div class="project__top">
-              <h3 class="project__title">프로젝트 B</h3>
-              <div class="project__links">
-                <a class="link" href="#" target="_blank" rel="noreferrer">Demo</a>
-                <a class="link" href="#" target="_blank" rel="noreferrer">Code</a>
-              </div>
-            </div>
-            <p class="project__desc">사용자 여정/데이터 흐름을 어떻게 설계했는지 강조합니다.</p>
-            <ul class="list list--compact">
-              <li>핵심 기능: 예) 실시간 알림, 권한 관리</li>
-              <li>내 역할: 예) 백엔드 API, DB 설계</li>
-              <li>성과: 예) 에러율 1.2% → 0.3%</li>
-            </ul>
-            <div class="tags">
-              <span class="tag">Node.js</span>
-              <span class="tag">PostgreSQL</span>
-              <span class="tag">Docker</span>
-            </div>
-          </article>
-
-          <article class="project card">
-            <div class="project__top">
-              <h3 class="project__title">프로젝트 C</h3>
-              <div class="project__links">
-                <a class="link" href="#" target="_blank" rel="noreferrer">Demo</a>
-                <a class="link" href="#" target="_blank" rel="noreferrer">Code</a>
-              </div>
-            </div>
-            <p class="project__desc">기술적 의사결정(Trade-off)을 2~3줄로 설명해보세요.</p>
-            <ul class="list list--compact">
-              <li>핵심 기능: 예) 파일 업로드, 이미지 최적화</li>
-              <li>내 역할: 예) 성능 측정/개선, 테스트 도입</li>
-              <li>성과: 예) LCP 1s대 유지</li>
-            </ul>
-            <div class="tags">
-              <span class="tag">Web Perf</span>
-              <span class="tag">Testing</span>
-              <span class="tag">CI/CD</span>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="experience">
-      <div class="container">
-        <div class="section__head">
-          <h2 class="section__title">경험</h2>
-          <p class="section__desc">회사/팀/성과 중심으로 간단히 적습니다.</p>
-        </div>
-
-        <div class="timeline">
-          <div class="timeline-item card">
-            <div class="timeline-item__top">
-              <div>
-                <div class="timeline-item__title">회사/팀명</div>
-                <div class="timeline-item__meta">직무 · 2024.01 - 2025.06</div>
-              </div>
-              <div class="timeline-item__badge">주요 성과</div>
-            </div>
-            <ul class="list list--compact">
-              <li>예) 신규 기능 6개 릴리즈 및 운영</li>
-              <li>예) 장애 대응/회고로 재발률 감소</li>
-              <li>예) 테스트/린트 도입으로 품질 개선</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="section__head">
-          <h2 class="section__title">연락</h2>
-          <p class="section__desc">메일/링크를 제공하고, 간단한 메시지를 남길 수 있게 합니다.</p>
-        </div>
-
-        <div class="grid grid--2">
-          <div class="card">
-            <h3 class="card__title">연락처</h3>
-            <div class="contact">
-              <div class="contact__row"><span class="muted">Email</span> <a class="link" href="mailto:you@example.com">you@example.com</a></div>
-              <div class="contact__row"><span class="muted">GitHub</span> <a class="link" href="https://github.com/" target="_blank" rel="noreferrer">github.com/your-id</a></div>
-              <div class="contact__row"><span class="muted">Blog</span> <a class="link" href="#" target="_blank" rel="noreferrer">https://</a></div>
-            </div>
-          </div>
-
-          <form class="card form" id="contactForm">
-            <h3 class="card__title">메시지</h3>
-            <label class="field">
-              <span class="field__label">이름</span>
-              <input class="field__input" name="name" autocomplete="name" required />
-            </label>
-            <label class="field">
-              <span class="field__label">이메일</span>
-              <input class="field__input" name="email" type="email" autocomplete="email" required />
-            </label>
-            <label class="field">
-              <span class="field__label">내용</span>
-              <textarea class="field__input field__textarea" name="message" rows="5" required></textarea>
-            </label>
-            <div class="form__actions">
-              <button class="btn btn--primary" type="submit">전송</button>
-              <button class="btn btn--ghost" type="reset">초기화</button>
-            </div>
-            <p class="form__hint muted" id="formHint">현재는 로컬 데모라 실제 전송 대신 클립보드로 복사됩니다.</p>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer__inner">
-      <div class="muted">© <span id="year"></span> [이름]. All rights reserved.</div>
-      <a class="link" href="#top">맨 위로</a>
-    </div>
-  </footer>
-
-  <script src="script.js" defer></script>
 </body>
 </html>
